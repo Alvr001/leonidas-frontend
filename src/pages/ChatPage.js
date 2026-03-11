@@ -23,7 +23,6 @@ function ChatPage() {
   const stompClientRef = useRef(null);
 
   const userId = parseInt(localStorage.getItem('userId'));
-  const userName = localStorage.getItem('userName');
 
   useEffect(() => {
 
@@ -59,7 +58,7 @@ function ChatPage() {
     return () => {
       client.deactivate();
     };
-
+     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [groupId]);
 
   useEffect(() => {
