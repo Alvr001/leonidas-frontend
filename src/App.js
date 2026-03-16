@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import LoginPage from './pages/LoginPage';
 import GroupsPage from './pages/GroupsPage';
 import ChatPage from './pages/ChatPage';
+import './App.css';
 
 function App() {
   const userId = localStorage.getItem('userId');
-
   return (
     <Router>
       <Routes>
