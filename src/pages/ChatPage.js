@@ -29,7 +29,7 @@ function ChatPage() {
     loadHistory();
 
     const client = new Client({
-      brokerURL: 'wss://leonidas-backend-production.up.railway.app/ws-native',
+      brokerURL: 'wss://alpheratz-backend-production.up.railway.app/ws-native',
 
       onConnect: () => {
         console.log('WebSocket conectado');

@@ -1,7 +1,7 @@
 import { Client } from '@stomp/stompjs';
 import SockJS from 'sockjs-client';
 
-const WS_URL = 'https://leonidas-backend-production.up.railway.app/ws';
+const WS_URL = 'https://alpheratz-backend-production.up.railway.app/ws';
 
 let client = null;
 

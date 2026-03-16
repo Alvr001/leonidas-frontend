@@ -81,7 +81,7 @@ function GroupsPage() {
         <div style={styles.headerLeft}>
           <span style={styles.headerLogo}>🛡️</span>
           <div>
-            <div style={styles.headerTitle}>Leonidas</div>
+            <div style={styles.headerTitle}>Alpheratz</div>
             <div style={styles.headerSub}>Hola, {userName}</div>
           </div>
         </div>

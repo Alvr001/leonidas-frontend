@@ -45,7 +45,7 @@ function LoginPage() {
     <div style={styles.container}>
       <div style={styles.card}>
         <div style={styles.logo}>🛡️</div>
-        <h1 style={styles.title}>Leonidas</h1>
+        <h1 style={styles.title}>Alpheratz</h1>
         <p style={styles.subtitle}>Red comunitaria de seguridad</p>
 
         <input
