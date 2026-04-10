@@ -1,3 +1,4 @@
+/* eslint-disable */
 importScripts('https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js');
 importScripts('https://www.gstatic.com/firebasejs/10.7.1/firebase-messaging-compat.js');
 
@@ -12,12 +13,14 @@ firebase.initializeApp({
 
 const messaging = firebase.messaging();
 
-// Notificaciones cuando la app está cerrada o en background
 messaging.onBackgroundMessage((payload) => {
   console.log('📩 Mensaje en background:', payload);
   const { title, body } = payload.notification || {};
   self.registration.showNotification(title || 'Alpheratz', {
     body: body || '',
-    icon: '/logo192.png'
+    icon: '/logo192.png',
+    badge: '/logo192.png',
+    vibrate: [200, 100, 200],
+    requireInteraction: true
   });
 });
