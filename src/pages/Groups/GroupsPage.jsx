@@ -142,7 +142,7 @@ useEffect(() => {
     if (stompClientRef.current) stompClientRef.current.deactivate();
 
     const client = new Client({
-      brokerURL: 'ws://localhost:8080/ws-native',
+      brokerURL:  WS_URL,
       reconnectDelay: 5000,
       onConnect: () => {
   // 🔥 chats (igual que antes)

@@ -65,7 +65,7 @@ function ChatPage() {
 
   useEffect(() => {
     const client = new Client({
-      brokerURL: 'ws://localhost:8080/ws-native',
+      brokerURL:  WS_URL,
       reconnectDelay: 3000,
       onConnect: () => {
         client.subscribe(`/topic/chat/${groupIdRef.current}`, (msg) => {
