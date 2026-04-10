@@ -1,10 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { ThemeProvider } from 'styled-components';
-import { lightTheme } from './styles/themes/lightTheme';
-import GlobalStyle from './styles/GlobalStyle';
 import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
 root.render(<App />);
+
+// Registrar Service Worker para PWA y notificaciones en background
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker
+      .register('/firebase-messaging-sw.js')
+      .then((reg) => console.log('✅ SW registrado:', reg.scope))
+      .catch((err) => console.error('❌ SW error:', err));
+  });
+}
